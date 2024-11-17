@@ -1,3 +1,4 @@
+#Daniel Jimenez Manrique
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
@@ -14,7 +15,7 @@ options.add_argument('--start-maximized')
 options.add_argument('--disable-infobars')
 
 # Ruta al chromedriver
-driver_path = 'C:\\Users\\Lala\\Desktop\\chromedriver-win64\\chromedriver.exe'
+driver_path = 'C:\\Users\\Dell\\Desktop\\Ciencia_Datos\\Selenium\\chromedriver-win64\\chromedriver.exe'
 
 # Crear un objeto Service con la ruta del driver
 service = Service(driver_path)
@@ -72,7 +73,7 @@ finally:
 # Crear un DataFrame con los resultados
 df = pd.DataFrame(productos, columns=['Producto'])
 
-# Guardar el DataFrame en un archivo Excel
-df.to_excel('productos_amazon.xlsx', index=False)
+# Guardar el DataFrame en un archivo CSV
+df.to_csv('productos_amazon.csv', index=False, encoding='utf-8')
 
-print("Archivo Excel creado exitosamente.")
+print("Archivo CSV creado exitosamente.")
